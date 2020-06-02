@@ -1,6 +1,5 @@
-from networking.https_checker import WebpageTest
-
 def test_bad_ssl():
+    from networking.https_checker import WebpageTest
     wt = WebpageTest()
     url = 'https://expired.badssl.com/'
     print('Checking ->', url)
@@ -10,6 +9,7 @@ def test_bad_ssl():
     assert wt.check_hsts(url=url) == False
 
 def test_good_https():
+    from networking.https_checker import WebpageTest
     wt = WebpageTest()
     url = 'https://python.org/'
     print('Checking ->', url)

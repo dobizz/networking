@@ -73,4 +73,7 @@ def main() -> None:
     os.system('cls')
     
 if __name__ == '__main__':
-    main()
+    if os.name == 'nt':
+        main()
+    else:
+        print('Sorry, this program is only for Windows')
